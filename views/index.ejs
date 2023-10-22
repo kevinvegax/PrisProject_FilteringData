@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Filtering Data</title>
+</head>
+<body>
+  <ul>
+    <% data.forEach(row => { %>
+      <li><%= row %></li>
+    <% }); %>
+  </ul>
+  <h1>1 - CARGA EXCEL</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="excelFile">
+    <br>
+    <br>
+    <button type="submit">Cargar archivo</button>
+  </form>
+  <h1> 2 - EJECUTA </h1>
+  <form action="/execute" method="post">
+    <button type="submit">Ejecutar Script</button>
+  </form>
+  <h1> 3 - DESCARGA </h1>
+  <form action="/download" method="post">
+    <button type="submit">Descargar datos</button>
+  </form>
+</body>
+</html>
